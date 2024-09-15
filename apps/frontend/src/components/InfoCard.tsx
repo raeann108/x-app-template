@@ -17,13 +17,13 @@ export const InfoCard = () => {
       <Box p={3}>
         <VStack w={"full"} spacing={{ base: 2, md: 4 }}>
           <Image src="/homedisplay.jpg"/>
-          <Button p="30px 20px"
+          {/* <Button p="30px 20px"
               ms="40px"
               me="10px"
               bg= 'white'
               color="black"
               border="solid 1px black"
-              // sx={{ _hover: {bg:"black", color:"white"}}}>Start now !</Button>
+              sx={{ _hover: {bg:"black", color:"white"}}}>Start now !</Button> */}
           {/* <Flex
             w={"full"}
             justifyContent={"space-between"}
