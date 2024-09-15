@@ -23,7 +23,7 @@ export const InfoCard = () => {
               bg= 'white'
               color="black"
               border="solid 1px black"
-              sx={{ _hover: {bg:"black", color:"white"}}}>Start now !</Button>
+              // sx={{ _hover: {bg:"black", color:"white"}}}>Start now !</Button>
           {/* <Flex
             w={"full"}
             justifyContent={"space-between"}
