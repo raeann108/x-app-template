@@ -39,7 +39,7 @@ function App() {
         logLevel={"DEBUG"}
       >
         <Router>
-        <Navbar isAuthenticated={isAuthenticated} onLogout={handleLogout} />
+          <Navbar isAuthenticated={isAuthenticated} onLogout={handleLogout} />
           <Flex flex={1}>
             <Container
               mt={{ base: 4, md: 10 }}
@@ -55,25 +55,22 @@ function App() {
                 {/* Public Routes */}
                 <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
                 <Route path="/signup" element={<SignUpPage />} />
-
+                <Route path="/" element={<InfoCard />} /> {/* Public route */}
+                
+                
                 {/* Protected Routes */}
                 {isAuthenticated ? (
                   <>
-                    <Route path="/" element={<InfoCard />} />
                     <Route path="/meal-planning" element={<MealPlanning />} />
                     <Route path="/instructions" element={<Instructions />} />
                     <Route path="/upload" element={<Dropzone />} />
                     <Route path="/viewSavedPlans" element={<ViewSavedPlans />} />
+                    <Route path="/inventory" element={<Inventory />} /> {/* Public route */}
                     <Route path="*" element={<Navigate to="/" replace />} />
                   </>
                 ) : (
                   <Route path="*" element={<Navigate to="/login" replace />} />
                 )}
-                <Route path="/" element={<InfoCard />} />
-                <Route path="/meal-planning" element={<MealPlanning />} />
-                <Route path="/instructions" element={<Instructions />} />
-                <Route path="/upload" element={<Dropzone />} />
-                <Route path="/Inventory" element={<Inventory />} />
               </Routes>
             </Container>
           </Flex>
@@ -86,4 +83,5 @@ function App() {
 }
 
 export default App;
+
 
