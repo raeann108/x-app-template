@@ -56,7 +56,7 @@ export const Dropzone = () => {
 
         setResponse(response);
       } catch (error) {
-        alert("Error submitting receipt");
+        alert("Error submitting meal photo");
       } finally {
         setIsLoading(false);
       }
@@ -89,7 +89,7 @@ export const Dropzone = () => {
         <input {...getInputProps()} />
         <HStack>
           <ScanIcon size={120} color={"gray"} />
-          <Text>Upload to scan</Text>
+          <Text>Upload Meal Photo</Text>
         </HStack>
       </Box>
     </VStack>
