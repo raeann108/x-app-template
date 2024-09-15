@@ -13,6 +13,7 @@ export class ContractsService {
       const result = await (
         await ecoEarnContract.transact.registerValidSubmission(submission.address, unitsUtils.parseUnits(REWARD_AMOUNT, 'ether'))
       ).wait();
+      console.log("receipt" )
       isSuccess = !result.reverted;
     } catch (error) {
       console.log('Error', error);

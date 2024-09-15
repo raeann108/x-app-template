@@ -1,6 +1,9 @@
 {
     "name": "@repo/config-contract",
     "version": "0.0.0",
+    "scripts": {
+    "contracts:deploy:testnet": "hardhat run scripts/deploy.js --network vechain_testnet"
+    },
     "private": true,
     "files": [
         "index"

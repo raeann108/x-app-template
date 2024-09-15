@@ -4,7 +4,7 @@
   "description": "TypeScript + Express API Server",
   "scripts": {
     "start": "npm run build && cross-env NODE_ENV=production node dist/server.js",
-    "dev": "cross-env NODE_ENV=development nodemon",
+    "dev": "cross-env NODE_ENV=production nodemon",
     "dev:prod": "cross-env NODE_ENV=production nodemon",
     "build": "swc src -d dist --source-maps --copy-files",
     "build:tsc": "tsc && tsc-alias",

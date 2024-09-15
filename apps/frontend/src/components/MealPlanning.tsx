@@ -47,7 +47,7 @@ const MealPlanning: React.FC = () => {
   const generateRecipe = async () => {
     setIsGeneratingRecipe(true);
     try {
-      const response = await fetch('https://api-inference.huggingface.co/models/gpt2', {
+      const response = await fetch('https://api-inference.huggingface.co/models/EleutherAI/gpt-neo-2.7B', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer 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`, // Replace with your actual Hugging Face API key
@@ -59,7 +59,7 @@ const MealPlanning: React.FC = () => {
             Exclusions: ${mealPlan.exclusions.join(', ')}\n
             Recipe:\n`,
           parameters: {
-            max_new_tokens: 150,
+            max_new_tokens: 250,
             temperature: 0.7,
           },
         }),
